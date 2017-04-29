@@ -54,9 +54,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="search">
 					<form>
 						<input type="text" value="search about something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'search about something...';}" >
-						<input type="submit" value="">
+						<input id="search" type="submit" value="">
+						<a id="redirect-a" href="search.html"></a>
 					</form>
-				</div>		
+				</div>
+				<script type="text/javascript">
+					$("#redirect-a").hide();
+					$('#search').on('click', function(){
+						$("#redirect-a").trigger("click");
+					});
+				</script>		
 				<!--<div>
 					<ul>
 						<li><a href="index.html">Bed</a></li>
@@ -92,9 +99,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="top-nav">
 			<ul class="header-in" >
 				<li style="background-color: #615c85"><a style="color: #ffffff" href="index.html" >Home</a></li>
-				<li><a href="about.html">about us</a> </li>
-				<li><a href="contact.html">contact us</a></li>
-				<li ><a href="#" >news</a></li>
+				<li><a href="about.html">About us</a> </li>
+				<li><a href="contact.html">Contact us</a></li>
+				<li ><a href="#" >News</a></li>
 			</ul>		
 				</div>
 				<div class="clearfix"> </div>
