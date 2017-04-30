@@ -280,57 +280,63 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="contact">
-	<h2>CONTACT</h2>
-				<div class="contact-in">
-				<div class=" col-md-3 contact-right">
-				     	<h5>Company Information</h5>
-						    	<p>227, Nguyen Van Cu Street</p>
-						   		<p>District 5, Ho Chi Minh city</p>
-						   		<p>Viet Nam</p>
-				   		<p>Phone: 888888888</p>
-				 	 	<p>Email: <a href="mailto:leminhsonphysics@gmail.com">leminhsonphysics@gmail.com</a></p>
-				   		<p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
-				    </div>
-				<div class=" col-md-9 contact-left">
-				  
-					    <form >
-					    	<div>
-						    	<span>Name</span>
-						    	<input name="userName" type="text" class="textbox">
-						    </div>
-						    <div>
-						    	<span>E-Mail</span>
-						    	<input name="userEmail" type="text" class="textbox">
-						    </div>
-						    <div>
-						    	<span>Subject</span>
-						    	<textarea name="userMsg"> </textarea>
-						    </div>
-						   <div>
-						   		<input type="submit" value="Submit">
-								
-						  </div>
-					    </form>
-				  </div>
-
-					
-					  <div class="clearfix"></div>
-				 </div>
-			    
-      		</div>
-	</div>
-		<div class="map">
-				 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d709563.4659174996!2d105.93959253905788!3d10.74824461335283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo+Chi+Minh+City%2C+Ho+Chi+Minh%2C+Vietnam!5e0!3m2!1sen!2s!4v1492960025281" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-		</div>
 </div>
+<!--banner-->
+	<div class="col-md-2 sidenav">
+		<a href="#" style="color: #fa7455">Account Management</a>
+		<a href="my-profile.html">My Profile</a>
+		<a href="order.html">Order</a>
+
+	</div>
+
+	<br><br>
+	<div class="col-md-10 col-sm-10 col-lg-10" style="margin-bottom: 100px">
+		<br>
+		<h4>Account Management</h4><br><br>
+		<div class="col-md-3 col-sm-3 col-lg-3 account-dashboard-box">
+			<div class="account-dashboard-content">
+				<h4 class="account-dashboard-title">Profile</h4>
+				<p class="account-dashboard-info">
+					Nguyễn Song Hoàng Ngân
+					<br>
+					nguyensonghoangngan@gmail.com
+				</p>
+			</div>
+			<div class="account-dashboard-edit">
+				<a href="#">EDIT</a>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-3 col-lg-3 col-md-offset-1 col-sm-offset-1 col-lg-offset-1 account-dashboard-box">
+			<div class="account-dashboard-content">
+				<h4 class="account-dashboard-title">Default order address</h4>
+				<p class="account-dashboard-info">
+					Default order address is not set
+					<br><br><br>
+					<a href="#">Add new address</a>
+				</p>
+			</div>
+			
+		</div>
+		<div class="col-md-3 col-sm-3 col-lg-3 col-md-offset-1 col-sm-offset-1 col-lg-offset-1 account-dashboard-box">
+			<div class="account-dashboard-content">
+				<h4 class="account-dashboard-title">Default billing address</h4>
+				<p class="account-dashboard-info">
+					Default billing address is not set
+					<br><br><br>
+					<a href="#">Add new address</a>
+				</p>
+			</div>
+			
+		</div>
+		
+	</div>
+
+
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
 			<div class="col-md-3 footer-left">
-				<a href="index.html"><img src="images/logo.png" width="60px" height="60px" alt="" ></a>
+				<a href="index.html"><img src="./images/logo.png" width="60px" height="60px" alt=""></a>
 			</div>
 			<div class="col-md-2 footer-middle">
 				<ul>
@@ -382,7 +388,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						});
 					</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
 	</div>
 
 </body>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
+
+	    // Make sure this.hash has a value before overriding default behavior
+	    if (this.hash !== "") {
+	      // Prevent default anchor click behavior
+	      event.preventDefault();
+
+	      // Store hash
+	      var hash = this.hash;
+
+	      // Using jQuery's animate() method to add smooth page scroll
+	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top
+	      }, 800, function(){
+	   
+	        // Add hash (#) to URL when done scrolling (default click behavior)
+	        window.location.hash = hash;
+	      });
+	    } // End if
+	  });
+	});
+</script>
 </html>
